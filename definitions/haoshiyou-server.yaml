@@ -1,36 +1,407 @@
+paths:
+  /HsyListings:
+    post:
+      tags:
+        - HsyListing
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: HsyListing.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+    put:
+      tags:
+        - HsyListing
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyListing.upsert__put_HsyListings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+    patch:
+      tags:
+        - HsyListing
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyListing.upsert__patch_HsyListings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+    get:
+      tags:
+        - HsyListing
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: HsyListing.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/HsyListing'
+      deprecated: false
+  /HsyListings/replaceOrCreate:
+    post:
+      tags:
+        - HsyListing
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: HsyListing.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+  /HsyListings/upsertWithWhere:
+    post:
+      tags:
+        - HsyListing
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: HsyListing.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+  '/HsyListings/{id}/exists':
+    get:
+      tags:
+        - HsyListing
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyListing.exists__get_HsyListings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/HsyListings/{id}':
+    head:
+      tags:
+        - HsyListing
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyListing.exists__head_HsyListings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - HsyListing
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: HsyListing.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+    delete:
+      tags:
+        - HsyListing
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: HsyListing.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - HsyListing
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyListing.prototype.updateAttributes__put_HsyListings_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyListing'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+    patch:
+      tags:
+        - HsyListing
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyListing.prototype.updateAttributes__patch_HsyListings_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyListing'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+  '/HsyListings/{id}/replace':
+    post:
+      tags:
+        - HsyListing
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: HsyListing.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+  /HsyListings/findOne:
+    get:
+      tags:
+        - HsyListing
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: HsyListing.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      deprecated: false
+  /HsyListings/update:
+    post:
+      tags:
+        - HsyListing
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: HsyListing.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /HsyListings/count:
+    get:
+      tags:
+        - HsyListing
+      summary: Count instances of the model matched by where from the data source.
+      operationId: HsyListing.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  HsyListing:
+    properties:
+      title:
+        type: string
+      price:
+        type: number
+        format: double
+      uid:
+        description: unique id
+        type: string
+    required:
+      - title
+      - price
+      - uid
+    additionalProperties: false
+  x-any:
+    properties: {}
+basePath: /api
 swagger: '2.0'
-
 info:
   x-ibm-name: haoshiyou-server
   version: 1.0.0
   title: haoshiyou-server
-
 schemes:
   - https
 host: $(catalog.host)
-basePath: /api
-
 consumes:
   - application/json
 produces:
   - application/json
-
 securityDefinitions:
- clientIdHeader:
-   type: apiKey
-   in: header
-   name: X-IBM-Client-Id
- clientSecretHeader:
-   in: "header"
-   name: "X-IBM-Client-Secret"
-   type: "apiKey"
-
-
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
 security:
- -
-   clientIdHeader: []
-   clientSecretHeader: []
-
+  - clientIdHeader: []
+    clientSecretHeader: []
 x-ibm-configuration:
   testable: true
   enforced: true
@@ -47,9 +418,3 @@ x-ibm-configuration:
     execute:
       - invoke:
           target-url: $(runtime-url)$(request.path)$(request.search)
-
-paths: {}
-
-
-definitions: {}
-

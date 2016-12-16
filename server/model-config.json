@@ -12,5 +12,10 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "HsyListing": {
+    "dataSource": "HsyMySql",
+    "public": true,
+    "strict": true
   }
 }

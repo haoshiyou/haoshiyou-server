@@ -1,1 +1,7 @@
-{}
+{
+  "HsyMySql": {
+    "url": "mysql://root:abcd1234@localhost:3306/haoshiyoudb",
+    "name": "HsyMySql",
+    "connector": "mysql"
+  }
+}
