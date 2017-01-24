@@ -1,6 +1,7 @@
 {
   "name": "HsyListing",
   "base": "PersistedModel",
+  "strict": true,
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -22,6 +23,31 @@
       "required": true,
       "index": true,
       "description": "unique id"
+    },
+    "location": {
+      "type": "geopoint",
+      "comments": "location of a listing"
+    },
+    "content": {
+      "type": "text"
+    },
+    "type": {
+      "type": "number",
+      "comments": "0 for ROOMMATE_WANTED, 1 for ROOM_WANTED"
+    },
+    "ownerId": {
+      "type": "string",
+      "id": true,
+      "index": true
+    },
+    "lastUpdated": {
+      "type": "date",
+      "required": true
+    },
+    "imageIds": {
+      "type": [
+        "string"
+      ]
     }
   },
   "validations": [],

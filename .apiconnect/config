@@ -1,1 +1,4 @@
-{}
+UI_Default_Server:
+  displayName: Bluemix Public
+  name: us-south
+  host: us.apiconnect.ibmcloud.com

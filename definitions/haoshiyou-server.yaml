@@ -359,6 +359,366 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /HsyUsers:
+    post:
+      tags:
+        - HsyUser
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: HsyUser.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+    put:
+      tags:
+        - HsyUser
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyUser.upsert__put_HsyUsers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+    patch:
+      tags:
+        - HsyUser
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyUser.upsert__patch_HsyUsers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+    get:
+      tags:
+        - HsyUser
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: HsyUser.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/HsyUser'
+      deprecated: false
+  /HsyUsers/replaceOrCreate:
+    post:
+      tags:
+        - HsyUser
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: HsyUser.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+  /HsyUsers/upsertWithWhere:
+    post:
+      tags:
+        - HsyUser
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: HsyUser.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+  '/HsyUsers/{id}/exists':
+    get:
+      tags:
+        - HsyUser
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyUser.exists__get_HsyUsers_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/HsyUsers/{id}':
+    head:
+      tags:
+        - HsyUser
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyUser.exists__head_HsyUsers_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - HsyUser
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: HsyUser.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+    delete:
+      tags:
+        - HsyUser
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: HsyUser.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - HsyUser
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyUser.prototype.updateAttributes__put_HsyUsers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyUser'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+    patch:
+      tags:
+        - HsyUser
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyUser.prototype.updateAttributes__patch_HsyUsers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyUser'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+  '/HsyUsers/{id}/replace':
+    post:
+      tags:
+        - HsyUser
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: HsyUser.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+  /HsyUsers/findOne:
+    get:
+      tags:
+        - HsyUser
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: HsyUser.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      deprecated: false
+  /HsyUsers/update:
+    post:
+      tags:
+        - HsyUser
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: HsyUser.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /HsyUsers/count:
+    get:
+      tags:
+        - HsyUser
+      summary: Count instances of the model matched by where from the data source.
+      operationId: HsyUser.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   HsyListing:
     properties:
@@ -370,13 +730,45 @@ definitions:
       uid:
         description: unique id
         type: string
+      location:
+        $ref: '#/definitions/GeoPoint'
+      content:
+        type: string
+      type:
+        type: number
+        format: double
+      ownerId:
+        type: string
+      lastUpdated:
+        type: string
+        format: date
+      imageIds:
+        type: array
+        items:
+          type: string
     required:
       - title
       - price
       - uid
+      - ownerId
+      - lastUpdated
     additionalProperties: false
   x-any:
     properties: {}
+  HsyUser:
+    properties:
+      id:
+        description: id of an user
+        type: string
+    required:
+      - id
+    additionalProperties: false
+  GeoPoint:
+    properties:
+      lat:
+        type: number
+      lng:
+        type: number
 basePath: /api
 swagger: '2.0'
 info:

@@ -16,6 +16,15 @@
   "HsyListing": {
     "dataSource": "HsyMySql",
     "public": true,
+    "strict": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "HsyUser": {
+    "dataSource": "HsyMySql",
+    "public": true,
+    "$promise": {},
+    "$resolved": true,
     "strict": true
   }
 }
