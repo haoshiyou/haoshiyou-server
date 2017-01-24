@@ -54,4 +54,4 @@ Powered by StrongLoop/ApiConnect
     ```
 
 ## Migrate to a New DataBase
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I8TvGrmZCGU" frameborder="0" allowfullscreen></iframe>
+[![How to use a new MySQL in ApiConnect(formerly StrongLoop)](https://j.gifs.com/Wnv8DJ.gif)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
