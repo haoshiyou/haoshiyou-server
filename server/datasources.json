@@ -3,5 +3,15 @@
     "url": "mysql://root:abcd1234@localhost:3306/haoshiyoudb",
     "name": "HsyMySql",
     "connector": "mysql"
+  },
+  "HsyMySQL-JwsDB": {
+    "url": "mysql://nkuyrfxyz1y7xxo2:cqgozcos4igateu2@o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/uacf30wqsezoi4zv",
+    "name": "HsyMySQL-JwsDB",
+    "connector": "mysql"
+  },
+  "HsyMySQL-ClearDB": {
+    "url": "mysql://bfddec2fb742ba:9696cc55@us-cdbr-iron-east-02.cleardb.net/heroku_913b0ee7a8425db?reconnect=true",
+    "name": "HsyMySQL-ClearDB",
+    "connector": "mysql"
   }
 }

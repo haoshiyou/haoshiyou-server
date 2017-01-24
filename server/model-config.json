@@ -14,14 +14,14 @@
     ]
   },
   "HsyListing": {
-    "dataSource": "HsyMySql",
+    "dataSource": "HsyMySQL-ClearDB",
     "public": true,
     "strict": true,
     "$promise": {},
     "$resolved": true
   },
   "HsyUser": {
-    "dataSource": "HsyMySql",
+    "dataSource": "HsyMySQL-ClearDB",
     "public": true,
     "$promise": {},
     "$resolved": true,

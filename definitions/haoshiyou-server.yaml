@@ -722,36 +722,36 @@ paths:
 definitions:
   HsyListing:
     properties:
-      title:
+      content:
+        $ref: '#/definitions/text'
+      imageIds:
+        type: array
+        items:
+          type: string
+      lastUpdated:
+        type: string
+        format: date
+      location:
+        $ref: '#/definitions/GeoPoint'
+      ownerId:
         type: string
       price:
+        type: number
+        format: double
+      title:
+        type: string
+      type:
         type: number
         format: double
       uid:
         description: unique id
         type: string
-      location:
-        $ref: '#/definitions/GeoPoint'
-      content:
-        type: string
-      type:
-        type: number
-        format: double
-      ownerId:
-        type: string
-      lastUpdated:
-        type: string
-        format: date
-      imageIds:
-        type: array
-        items:
-          type: string
     required:
-      - title
-      - price
-      - uid
-      - ownerId
       - lastUpdated
+      - ownerId
+      - price
+      - title
+      - uid
     additionalProperties: false
   x-any:
     properties: {}

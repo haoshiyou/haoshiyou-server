@@ -35,7 +35,6 @@ Powered by StrongLoop/ApiConnect
       --insecure
     ```
 
-
 ## Working with Ionic
 
  1. Generate Angular2 SDK
@@ -54,3 +53,5 @@ Powered by StrongLoop/ApiConnect
     -d ng2web -i disabled -v enabled
     ```
 
+## Migrate to a New DataBase
+[![Migrate to a new MySQL instance](https://img.youtube.com/vi/I8TvGrmZCGU/0.jpg)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
