@@ -54,4 +54,4 @@ Powered by StrongLoop/ApiConnect
     ```
 
 ## Migrate to a New DataBase
-[![Migrate to a new MySQL instance](https://img.youtube.com/vi/I8TvGrmZCGU/0.jpg)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I8TvGrmZCGU" frameborder="0" allowfullscreen></iframe>
