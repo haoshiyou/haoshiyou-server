@@ -747,10 +747,7 @@ definitions:
         description: unique id
         type: string
     required:
-      - lastUpdated
       - ownerId
-      - price
-      - title
       - uid
     additionalProperties: false
   x-any:
