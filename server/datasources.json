@@ -1,9 +1,4 @@
 {
-  "HsyMySql": {
-    "url": "mysql://root:abcd1234@localhost:3306/haoshiyoudb",
-    "name": "HsyMySql",
-    "connector": "mysql"
-  },
   "HsyMySQL-JwsDB": {
     "url": "mysql://nkuyrfxyz1y7xxo2:cqgozcos4igateu2@o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/uacf30wqsezoi4zv",
     "name": "HsyMySQL-JwsDB",
