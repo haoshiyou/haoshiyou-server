@@ -724,6 +724,8 @@ definitions:
     properties:
       content:
         $ref: '#/definitions/text'
+      hsyGroupEnum:
+        type: string
       imageIds:
         type: array
         items:
@@ -745,6 +747,8 @@ definitions:
         format: double
       uid:
         description: unique id
+        type: string
+      wechatId:
         type: string
     required:
       - ownerId

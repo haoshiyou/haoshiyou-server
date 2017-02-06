@@ -10,6 +10,10 @@
     "content": {
       "type": "text"
     },
+    "hsyGroupEnum": {
+      "type": "string",
+      "required": false
+    },
     "imageIds": {
       "type": [
         "string"
@@ -49,6 +53,10 @@
       "required": true,
       "index": true,
       "description": "unique id"
+    },
+    "wechatId": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

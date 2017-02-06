@@ -57,6 +57,14 @@ Powered by StrongLoop/ApiConnect
   ../haoshiyou-dev/haoshiyou/src/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
+  
+  or for `haoshiyou-bot`
+
+  ```bash
+  ./node_modules/.bin/lb-sdk server/server \
+  ../haoshiyou-dev/haoshiyou-bot/loopbacksdk \
+  -d ng2web -i disabled -v enabled
+  ```
 
 ## Migrate to a New DataBase
 [![How to use a new MySQL in ApiConnect(formerly StrongLoop)](https://j.gifs.com/Wnv8DJ.gif)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
