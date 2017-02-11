@@ -761,6 +761,17 @@ definitions:
       id:
         description: id of an user
         type: string
+      name:
+        description: name of an user
+        type: string
+      avatarId:
+        description: avatar image id in cloudinary
+        type: string
+      pushNotificationRegIds:
+        description: push notification registration ids
+        type: array
+        items:
+          type: string
     required:
       - id
     additionalProperties: false
