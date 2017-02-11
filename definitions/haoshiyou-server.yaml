@@ -758,20 +758,28 @@ definitions:
     properties: {}
   HsyUser:
     properties:
+      avatarId:
+        description: avatar image id in cloudinary
+        type: string
       id:
         description: id of an user
         type: string
       name:
         description: name of an user
         type: string
-      avatarId:
-        description: avatar image id in cloudinary
-        type: string
       pushNotificationRegIds:
         description: push notification registration ids
         type: array
         items:
           type: string
+      weixin:
+        type: string
+      created:
+        type: string
+        format: date
+      lastUpdated:
+        type: string
+        format: date
     required:
       - id
     additionalProperties: false

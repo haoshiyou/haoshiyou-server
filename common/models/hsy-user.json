@@ -7,6 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
+    "avatarId": {
+      "type": "string",
+      "required": false,
+      "description": "avatar image id in cloudinary"
+    },
     "id": {
       "type": "string",
       "id": true,
@@ -26,10 +31,17 @@
       "required": false,
       "description": "push notification registration ids"
     },
-    "avatarId": {
+    "weixin": {
       "type": "string",
-      "required": false,
-      "description": "avatar image id in cloudinary"
+      "required": false
+    },
+    "created": {
+      "type": "date",
+      "required": false
+    },
+    "lastUpdated": {
+      "type": "date",
+      "required": false
     }
   },
   "validations": [],

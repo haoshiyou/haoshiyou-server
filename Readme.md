@@ -62,7 +62,7 @@ Powered by StrongLoop/ApiConnect
 
   ```bash
   ./node_modules/.bin/lb-sdk server/server \
-  ../haoshiyou-dev/haoshiyou-bot/loopbacksdk \
+  ../haoshiyou-bot/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
 
