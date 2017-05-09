@@ -12,7 +12,8 @@
     },
     "hsyGroupEnum": {
       "type": "string",
-      "required": false
+      "required": false,
+      "description": ""
     },
     "imageIds": {
       "type": [
@@ -57,6 +58,11 @@
     "wechatId": {
       "type": "string",
       "required": false
+    },
+    "listingTypeEnum": {
+      "type": "string",
+      "required": false,
+      "description": "listing type enum"
     }
   },
   "validations": [],

@@ -750,6 +750,9 @@ definitions:
         type: string
       wechatId:
         type: string
+      listingTypeEnum:
+        description: listing type enum
+        type: string
     required:
       - ownerId
       - uid
