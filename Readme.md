@@ -28,7 +28,7 @@ Powered by StrongLoop/ApiConnect
     --header 'x-ibm-client-secret: SECRET' \
     --insecure
   ```
-#### Through UI
+### Through UI
 
   - Through CLI, run `npm start` 
   
@@ -45,6 +45,7 @@ Powered by StrongLoop/ApiConnect
     ```
 
   - Or visits local instance at http://0.0.0.0:3000/api/HsyListings/f8e40c34-e09a-4c2f-abb2-c5fe685338be
+
 ## Working with Ionic
 
   Generate Angular2 SDK
@@ -70,6 +71,7 @@ Powered by StrongLoop/ApiConnect
   ../haoshiyou-bot/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
+## Release to Heroku
 
 ## Migrate to a New DataBase
 [![How to use a new MySQL in ApiConnect(formerly StrongLoop)](https://j.gifs.com/Wnv8DJ.gif)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
