@@ -72,6 +72,8 @@ Powered by StrongLoop/ApiConnect
   -d ng2web -i disabled -v enabled
   ```
 ## Release to Heroku
-
+```bash
+git push heroku master
+```
 ## Migrate to a New DataBase
 [![How to use a new MySQL in ApiConnect(formerly StrongLoop)](https://j.gifs.com/Wnv8DJ.gif)](https://www.youtube.com/watch?v=I8TvGrmZCGU)
