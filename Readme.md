@@ -6,8 +6,9 @@ Powered by StrongLoop/ApiConnect
 
 1. Start the MySQL server on your MacBook
 
-2. Start the Server
+2. Start the Server using API Connect
 
+### Through API Connect GUI
   - Though GUI, first run in `haoshiyou-server` folder, 
   
   ```bash
@@ -27,8 +28,11 @@ Powered by StrongLoop/ApiConnect
     --header 'x-ibm-client-secret: SECRET' \
     --insecure
   ```
+#### Through UI
 
-  - Through CLI, run `npm start`, and then query the server by
+  - Through CLI, run `npm start` 
+  
+  - then query the server by
 
     ```bash
     curl --request GET \
@@ -40,6 +44,7 @@ Powered by StrongLoop/ApiConnect
       --insecure
     ```
 
+  - Or visits local instance at http://0.0.0.0:3000/api/HsyListings/f8e40c34-e09a-4c2f-abb2-c5fe685338be
 ## Working with Ionic
 
   Generate Angular2 SDK
