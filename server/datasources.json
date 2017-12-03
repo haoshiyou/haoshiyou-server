@@ -1,6 +1,6 @@
 {
   "HsyMySQL-ClearDB": {
-    "url": "mysql://bfddec2fb742ba:9696cc55@us-cdbr-iron-east-02.cleardb.net/heroku_913b0ee7a8425db?reconnect=true",
+    "url": "TALK TO xinbenlv to ask for DB configuration files",
     "name": "HsyMySQL-ClearDB",
     "connector": "mysql"
   }

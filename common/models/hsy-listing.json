@@ -7,41 +7,110 @@
     "validateUpsert": true
   },
   "properties": {
+    "addressCityAndState": {
+      "type": "string",
+      "required": false,
+      "description": "string for City and State",
+      "deleted": false
+    },
+    "addressLine": {
+      "type": "string",
+      "required": false,
+      "description": "string for First line of Address, usually street number and street name"
+    },
+    "amenities": {
+      "type": "object",
+      "required": false,
+      "description": "amenities in Key-Value pair for extension"
+    },
     "content": {
-      "type": "text"
+      "type": "text",
+      "description": "string of longer version description for entire listing"
     },
     "hsyGroupEnum": {
       "type": "string",
       "required": false,
-      "description": ""
+      "description": "string enum such as ['SanFrancisco','SouthBayWest']"
+    },
+    "hsyGroupNick": {
+      "type": "string",
+      "required": false,
+      "description": "string nickname inside of a Hsy Group"
     },
     "imageIds": {
       "type": [
         "string"
       ]
     },
+    "isRentingEntireHouse": {
+      "type": "boolean",
+      "required": false,
+      "description": ""
+    },
     "lastUpdated": {
       "type": "date",
       "required": false
     },
+    "listingTypeEnum": {
+      "type": "string",
+      "required": false,
+      "description": "listing type enum indicating ROOM_NEEDED or ROOMATE_NEEDED"
+    },
     "location": {
       "type": "geopoint",
-      "comments": "location of a listing"
+      "description": "Geo Location in (Lat, Lng) pair format",
+      "comments": "location of a listing",
+      "isArray": false
     },
-    "ownerId": {
-      "type": "string",
-      "required": true,
-      "index": true
+    "numBathRoom": {
+      "type": "number",
+      "required": false
+    },
+    "numBedRoom": {
+      "type": "number",
+      "required": false,
+      "description": ""
+    },
+    "otherCosts": {
+      "type": "object",
+      "required": false,
+      "description": "object of key(cost)-value(string) pair of other costs such as {networkIncluded:true}"
     },
     "price": {
       "type": "number",
-      "required": false
+      "required": false,
+      "description": "number for price of a rental per month"
+    },
+    "rentalEndDate": {
+      "type": "date",
+      "required": false,
+      "description": "The end date if it's a short rental"
+    },
+    "rentalStartDate": {
+      "type": "date",
+      "required": false,
+      "description": "date indicating when the house will be available"
+    },
+    "requireToContact": {
+      "type": "string",
+      "required": false,
+      "description": "string enum indicating requirement to contact ['REGISTER'. 'LINKEDIN_CONNECTED']"
+    },
+    "singleRoomBathRoomType": {
+      "type": "string",
+      "required": false,
+      "description": "string enum in ['SHARED', 'PRIVATE_IN_ROOM', 'PRIVATE_OUT_OF_ROOM']"
+    },
+    "state": {
+      "type": "string",
+      "required": false,
+      "description": "string enum of ['ACTIVE', 'INACTIVE', 'DRAFT']"
     },
     "title": {
       "type": "string",
       "id": false,
       "required": false,
-      "description": ""
+      "description": "short string describing the title of a post"
     },
     "type": {
       "type": "number",
@@ -51,17 +120,20 @@
       "type": "string",
       "id": true,
       "required": true,
-      "index": true,
-      "description": "unique id"
+      "index": {"unique": true} ,
+      "description": "unique id for HsyListing",
+      "isArray": false
     },
     "wechatId": {
       "type": "string",
-      "required": false
-    },
-    "listingTypeEnum": {
-      "type": "string",
       "required": false,
-      "description": "listing type enum"
+      "description": "[DEPRECATED]"
+    },
+    "ownerId": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "description": "String Id to join with HsyUser.id"
     }
   },
   "validations": [],

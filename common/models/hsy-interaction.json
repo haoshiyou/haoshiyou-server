@@ -1,0 +1,38 @@
+{
+  "name": "HsyInteraction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "listingId": {
+      "type": "string",
+      "required": false,
+      "description": "id to join with HsyListing"
+    },
+    "type": {
+      "type": "string",
+      "required": false,
+      "index": true,
+      "description": "string enum indicating type of interaction, usch as 'BUMP','MARK_INACTIVE'"
+    },
+    "uid": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "interaction id",
+      "isArray": false
+    },
+    "userId": {
+      "type": "string",
+      "required": false,
+      "description": "id to join with HsyUser indicating whicd user is conducting this interaction"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

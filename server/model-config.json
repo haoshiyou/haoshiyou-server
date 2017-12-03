@@ -26,5 +26,12 @@
     "$promise": {},
     "$resolved": true,
     "strict": true
+  },
+  "HsyInteraction": {
+    "dataSource": "HsyMySQL-ClearDB",
+    "public": true,
+    "strict": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

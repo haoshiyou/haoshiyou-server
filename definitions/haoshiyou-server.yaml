@@ -65,7 +65,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -181,7 +181,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: Filter defining fields and include
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -224,7 +224,7 @@ paths:
             $ref: '#/definitions/HsyListing'
         - name: id
           in: path
-          description: PersistedModel id
+          description: HsyListing id
           required: true
           type: string
           format: JSON
@@ -249,7 +249,7 @@ paths:
             $ref: '#/definitions/HsyListing'
         - name: id
           in: path
-          description: PersistedModel id
+          description: HsyListing id
           required: true
           type: string
           format: JSON
@@ -294,7 +294,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -425,7 +425,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -541,7 +541,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: Filter defining fields and include
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -584,7 +584,7 @@ paths:
             $ref: '#/definitions/HsyUser'
         - name: id
           in: path
-          description: PersistedModel id
+          description: HsyUser id
           required: true
           type: string
           format: JSON
@@ -609,7 +609,7 @@ paths:
             $ref: '#/definitions/HsyUser'
         - name: id
           in: path
-          description: PersistedModel id
+          description: HsyUser id
           required: true
           type: string
           format: JSON
@@ -654,7 +654,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -719,39 +719,446 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /HsyInteractions:
+    post:
+      tags:
+        - HsyInteraction
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: HsyInteraction.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+    put:
+      tags:
+        - HsyInteraction
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyInteraction.upsert__put_HsyInteractions
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+    patch:
+      tags:
+        - HsyInteraction
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: HsyInteraction.upsert__patch_HsyInteractions
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+    get:
+      tags:
+        - HsyInteraction
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: HsyInteraction.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  /HsyInteractions/replaceOrCreate:
+    post:
+      tags:
+        - HsyInteraction
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: HsyInteraction.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  /HsyInteractions/upsertWithWhere:
+    post:
+      tags:
+        - HsyInteraction
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: HsyInteraction.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  '/HsyInteractions/{id}/exists':
+    get:
+      tags:
+        - HsyInteraction
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyInteraction.exists__get_HsyInteractions_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/HsyInteractions/{id}':
+    head:
+      tags:
+        - HsyInteraction
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'HsyInteraction.exists__head_HsyInteractions_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - HsyInteraction
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: HsyInteraction.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+    delete:
+      tags:
+        - HsyInteraction
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: HsyInteraction.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - HsyInteraction
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyInteraction.prototype.updateAttributes__put_HsyInteractions_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyInteraction'
+        - name: id
+          in: path
+          description: HsyInteraction id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+    patch:
+      tags:
+        - HsyInteraction
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'HsyInteraction.prototype.updateAttributes__patch_HsyInteractions_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyInteraction'
+        - name: id
+          in: path
+          description: HsyInteraction id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  '/HsyInteractions/{id}/replace':
+    post:
+      tags:
+        - HsyInteraction
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: HsyInteraction.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  /HsyInteractions/findOne:
+    get:
+      tags:
+        - HsyInteraction
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: HsyInteraction.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      deprecated: false
+  /HsyInteractions/update:
+    post:
+      tags:
+        - HsyInteraction
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: HsyInteraction.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /HsyInteractions/count:
+    get:
+      tags:
+        - HsyInteraction
+      summary: Count instances of the model matched by where from the data source.
+      operationId: HsyInteraction.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   HsyListing:
     properties:
+      addressCityAndState:
+        description: string for City and State
+        type: string
+      addressLine:
+        description: 'string for First line of Address, usually street number and street name'
+        type: string
+      amenities:
+        description: amenities in Key-Value pair for extension
+        type: object
       content:
+        description: string of longer version description for entire listing
         $ref: '#/definitions/text'
       hsyGroupEnum:
+        description: "string enum such as ['SanFrancisco','SouthBayWest']"
+        type: string
+      hsyGroupNick:
+        description: string nickname inside of a Hsy Group
         type: string
       imageIds:
         type: array
         items:
           type: string
+      isRentingEntireHouse:
+        type: boolean
       lastUpdated:
         type: string
-        format: date
-      location:
-        $ref: '#/definitions/GeoPoint'
-      ownerId:
+        format: date-time
+      listingTypeEnum:
+        description: listing type enum indicating ROOM_NEEDED or ROOMATE_NEEDED
         type: string
-      price:
+      location:
+        description: 'Geo Location in (Lat, Lng) pair format'
+        $ref: '#/definitions/GeoPoint'
+      numBathRoom:
         type: number
         format: double
+      numBedRoom:
+        type: number
+        format: double
+      otherCosts:
+        description: 'object of key(cost)-value(string) pair of other costs such as {networkIncluded:true}'
+        type: object
+      ownerId:
+        description: String Id to join with HsyUser.id
+        type: string
+      price:
+        description: number for price of a rental per month
+        type: number
+        format: double
+      rentalEndDate:
+        description: "The end date if it's a short rental"
+        type: string
+        format: date-time
+      rentalStartDate:
+        description: date indicating when the house will be available
+        type: string
+        format: date-time
+      requireToContact:
+        description: "string enum indicating requirement to contact ['REGISTER'. 'LINKEDIN_CONNECTED']"
+        type: string
+      singleRoomBathRoomType:
+        description: "string enum in ['SHARED', 'PRIVATE_IN_ROOM', 'PRIVATE_OUT_OF_ROOM']"
+        type: string
+      state:
+        description: "string enum of ['ACTIVE', 'INACTIVE', 'DRAFT']"
+        type: string
       title:
+        description: short string describing the title of a post
         type: string
       type:
         type: number
         format: double
       uid:
-        description: unique id
+        description: unique id for HsyListing
         type: string
       wechatId:
-        type: string
-      listingTypeEnum:
-        description: listing type enum
+        description: '[DEPRECATED]'
         type: string
     required:
       - ownerId
@@ -764,9 +1171,19 @@ definitions:
       avatarId:
         description: avatar image id in cloudinary
         type: string
+      contactEmail:
+        type: string
+      contactPhone:
+        type: string
+      created:
+        type: string
+        format: date-time
       id:
         description: id of an user
         type: string
+      lastUpdated:
+        type: string
+        format: date-time
       name:
         description: name of an user
         type: string
@@ -776,15 +1193,27 @@ definitions:
         items:
           type: string
       weixin:
+        description: string of WeChat(aka WeiXin) Id
         type: string
-      created:
-        type: string
-        format: date
-      lastUpdated:
-        type: string
-        format: date
     required:
       - id
+    additionalProperties: false
+  HsyInteraction:
+    properties:
+      listingId:
+        description: id to join with HsyListing
+        type: string
+      type:
+        description: "string enum indicating type of interaction, usch as 'BUMP','MARK_INACTIVE'"
+        type: string
+      uid:
+        description: interaction id
+        type: string
+      userId:
+        description: id to join with HsyUser indicating whicd user is conducting this interaction
+        type: string
+    required:
+      - uid
     additionalProperties: false
   GeoPoint:
     properties:
@@ -796,8 +1225,14 @@ basePath: /api
 swagger: '2.0'
 info:
   x-ibm-name: haoshiyou-server
-  version: 1.0.0
+  version: 1.1.0
   title: haoshiyou-server
+  description: Server for haoshiyou.org. Currently still in BETA.
+  contact:
+    name: Zainan Zhou
+    email: zzn+haoshiyou@zzn.im
+    url: 'http://me.zzn.im'
+  termsOfService: ''
 schemes:
   - https
 host: $(catalog.host)

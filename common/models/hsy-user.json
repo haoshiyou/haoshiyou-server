@@ -12,12 +12,29 @@
       "required": false,
       "description": "avatar image id in cloudinary"
     },
+    "contactEmail": {
+      "type": "string",
+      "required": false
+    },
+    "contactPhone": {
+      "type": "string",
+      "required": false
+    },
+    "created": {
+      "type": "date",
+      "required": false
+    },
     "id": {
       "type": "string",
       "id": true,
       "required": true,
       "index": true,
-      "description": "id of an user"
+      "description": "id of an user",
+      "isArray": false
+    },
+    "lastUpdated": {
+      "type": "date",
+      "required": false
     },
     "name": {
       "type": "string",
@@ -33,15 +50,8 @@
     },
     "weixin": {
       "type": "string",
-      "required": false
-    },
-    "created": {
-      "type": "date",
-      "required": false
-    },
-    "lastUpdated": {
-      "type": "date",
-      "required": false
+      "required": false,
+      "description": "string of WeChat(aka WeiXin) Id"
     }
   },
   "validations": [],

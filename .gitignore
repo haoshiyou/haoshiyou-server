@@ -17,3 +17,8 @@
 coverage
 node_modules
 npm-debug.log
+
+# devel datasource and credentials
+server/datasources.dev.json
+server/datasources.legacy.json
+server/datasources.prod.json
