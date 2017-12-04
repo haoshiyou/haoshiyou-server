@@ -33,6 +33,11 @@
       "required": false,
       "index": false,
       "description": "id to join with HsyUser indicating whicd user is conducting this interaction"
+    },
+    "interaction_time": {
+      "type": "date",
+      "required": true,
+      "index": true
     }
   },
   "validations": [],

@@ -1,6 +1,9 @@
 basePath: /api
 consumes:
   - application/json
+  - application/x-www-form-urlencoded
+  - application/xml
+  - text/xml
 definitions:
   GeoPoint:
     properties:
@@ -157,17 +160,9 @@ definitions:
       - id
   x-any:
     properties: {}
-host: $(catalog.host)
 info:
-  contact:
-    email: zzn+haoshiyou@zzn.im
-    name: Zainan Zhou
-    url: 'http://me.zzn.im'
-  description: Server for haoshiyou.org. Currently still in BETA.
-  termsOfService: ''
   title: haoshiyou-server
   version: 1.1.0
-  x-ibm-name: haoshiyou-server
 paths:
   /HsyInteractions:
     get:
@@ -251,6 +246,41 @@ paths:
       summary: >-
         Patch an existing model instance or insert a new one into the data
         source.
+      tags:
+        - HsyInteraction
+  /HsyInteractions/change-stream:
+    get:
+      deprecated: false
+      operationId: HsyInteraction.createChangeStream__get_HsyInteractions_change-stream
+      parameters:
+        - format: JSON
+          in: query
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
+      tags:
+        - HsyInteraction
+    post:
+      deprecated: false
+      operationId: HsyInteraction.createChangeStream__post_HsyInteractions_change-stream
+      parameters:
+        - format: JSON
+          in: formData
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
       tags:
         - HsyInteraction
   /HsyInteractions/count:
@@ -449,6 +479,12 @@ paths:
       deprecated: false
       operationId: 'HsyInteraction.prototype.updateAttributes__patch_HsyInteractions_{id}'
       parameters:
+        - description: HsyInteraction id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -456,12 +492,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyInteraction'
             description: An object of model property name/value pairs
-        - description: HsyInteraction id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -476,6 +506,12 @@ paths:
       deprecated: false
       operationId: 'HsyInteraction.prototype.updateAttributes__put_HsyInteractions_{id}'
       parameters:
+        - description: HsyInteraction id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -483,12 +519,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyInteraction'
             description: An object of model property name/value pairs
-        - description: HsyInteraction id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -631,6 +661,41 @@ paths:
       summary: >-
         Patch an existing model instance or insert a new one into the data
         source.
+      tags:
+        - HsyListing
+  /HsyListings/change-stream:
+    get:
+      deprecated: false
+      operationId: HsyListing.createChangeStream__get_HsyListings_change-stream
+      parameters:
+        - format: JSON
+          in: query
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
+      tags:
+        - HsyListing
+    post:
+      deprecated: false
+      operationId: HsyListing.createChangeStream__post_HsyListings_change-stream
+      parameters:
+        - format: JSON
+          in: formData
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
       tags:
         - HsyListing
   /HsyListings/count:
@@ -829,6 +894,12 @@ paths:
       deprecated: false
       operationId: 'HsyListing.prototype.updateAttributes__patch_HsyListings_{id}'
       parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -836,12 +907,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyListing'
             description: An object of model property name/value pairs
-        - description: HsyListing id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -856,6 +921,12 @@ paths:
       deprecated: false
       operationId: 'HsyListing.prototype.updateAttributes__put_HsyListings_{id}'
       parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -863,12 +934,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyListing'
             description: An object of model property name/value pairs
-        - description: HsyListing id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -1183,6 +1248,41 @@ paths:
         source.
       tags:
         - HsyUser
+  /HsyUsers/change-stream:
+    get:
+      deprecated: false
+      operationId: HsyUser.createChangeStream__get_HsyUsers_change-stream
+      parameters:
+        - format: JSON
+          in: query
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
+      tags:
+        - HsyUser
+    post:
+      deprecated: false
+      operationId: HsyUser.createChangeStream__post_HsyUsers_change-stream
+      parameters:
+        - format: JSON
+          in: formData
+          name: options
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      summary: Create a change stream.
+      tags:
+        - HsyUser
   /HsyUsers/count:
     get:
       deprecated: false
@@ -1379,6 +1479,12 @@ paths:
       deprecated: false
       operationId: 'HsyUser.prototype.updateAttributes__patch_HsyUsers_{id}'
       parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -1386,12 +1492,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyUser'
             description: An object of model property name/value pairs
-        - description: HsyUser id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -1406,6 +1506,12 @@ paths:
       deprecated: false
       operationId: 'HsyUser.prototype.updateAttributes__put_HsyUsers_{id}'
       parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
         - description: An object of model property name/value pairs
           in: body
           name: data
@@ -1413,12 +1519,6 @@ paths:
           schema:
             $ref: '#/definitions/HsyUser'
             description: An object of model property name/value pairs
-        - description: HsyUser id
-          format: JSON
-          in: path
-          name: id
-          required: true
-          type: string
       responses:
         '200':
           description: Request was successful
@@ -1481,34 +1581,12 @@ paths:
         - HsyUser
 produces:
   - application/json
-schemes:
-  - https
-security:
-  - clientIdHeader: []
-    clientSecretHeader: []
-securityDefinitions:
-  clientIdHeader:
-    in: header
-    name: X-IBM-Client-Id
-    type: apiKey
-  clientSecretHeader:
-    in: header
-    name: X-IBM-Client-Secret
-    type: apiKey
+  - application/xml
+  - text/xml
+  - application/javascript
+  - text/javascript
 swagger: '2.0'
-x-ibm-configuration:
-  assembly:
-    execute:
-      - invoke:
-          target-url: $(runtime-url)$(request.path)$(request.search)
-  catalogs:
-    apic-dev:
-      properties:
-        runtime-url: $(TARGET_URL)
-    sb:
-      properties:
-        runtime-url: 'http://localhost:4001'
-  cors:
-    enabled: true
-  enforced: true
-  testable: true
+tags:
+  - name: HsyListing
+  - name: HsyUser
+  - name: HsyInteraction
