@@ -137,7 +137,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "interactions": {
+      "type": "hasMany",
+      "model": "HsyInteraction",
+      "foreignKey": "listingId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

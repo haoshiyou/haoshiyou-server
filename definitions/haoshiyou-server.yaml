@@ -897,6 +897,176 @@ paths:
       summary: Check whether a model instance exists in the data source.
       tags:
         - HsyListing
+  '/HsyListings/{id}/interactions':
+    delete:
+      deprecated: false
+      operationId: HsyListing.prototype.__delete__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      summary: Deletes all interactions of this model.
+      tags:
+        - HsyListing
+    get:
+      deprecated: false
+      operationId: HsyListing.prototype.__get__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - format: JSON
+          in: query
+          name: filter
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            items:
+              $ref: '#/definitions/HsyInteraction'
+            type: array
+      summary: Queries interactions of HsyListing.
+      tags:
+        - HsyListing
+    post:
+      deprecated: false
+      operationId: HsyListing.prototype.__create__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - in: body
+          name: data
+          required: false
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      summary: Creates a new instance in interactions of this model.
+      tags:
+        - HsyListing
+  '/HsyListings/{id}/interactions/count':
+    get:
+      deprecated: false
+      operationId: HsyListing.prototype.__count__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Criteria to match model instances
+          format: JSON
+          in: query
+          name: where
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            properties:
+              count:
+                format: double
+                type: number
+            type: object
+      summary: Counts interactions of HsyListing.
+      tags:
+        - HsyListing
+  '/HsyListings/{id}/interactions/{fk}':
+    delete:
+      deprecated: false
+      operationId: HsyListing.prototype.__destroyById__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for interactions
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      summary: Delete a related item by id for interactions.
+      tags:
+        - HsyListing
+    get:
+      deprecated: false
+      operationId: HsyListing.prototype.__findById__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for interactions
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      summary: Find a related item by id for interactions.
+      tags:
+        - HsyListing
+    put:
+      deprecated: false
+      operationId: HsyListing.prototype.__updateById__interactions
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for interactions
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+        - in: body
+          name: data
+          required: false
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyInteraction'
+      summary: Update a related item by id for interactions.
+      tags:
+        - HsyListing
   '/HsyListings/{id}/replace':
     post:
       deprecated: false
