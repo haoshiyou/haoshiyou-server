@@ -34,7 +34,7 @@
       "index": false,
       "description": "id to join with HsyUser indicating whicd user is conducting this interaction"
     },
-    "interaction_time": {
+    "interactionTime": {
       "type": "date",
       "required": true,
       "index": true

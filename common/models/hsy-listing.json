@@ -134,6 +134,10 @@
       "type": "string",
       "required": false,
       "description": "[DEPRECATED]"
+    },
+    "latestUpdatedOrBump": {
+      "type": "date",
+      "comments": "latestUpdatedOrBump for sorting"
     }
   },
   "validations": [],

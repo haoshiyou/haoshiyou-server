@@ -11,7 +11,8 @@ definitions:
   HsyInteraction:
     additionalProperties: false
     properties:
-      interaction_time:
+      interactionTime:
+        description: new interaction time
         format: date-time
         type: string
       listingId:
@@ -32,7 +33,7 @@ definitions:
         type: string
     required:
       - uid
-      - interaction_time
+      - interactionTime
   HsyListing:
     additionalProperties: false
     properties:
@@ -63,6 +64,9 @@ definitions:
       isRentingEntireHouse:
         type: boolean
       lastUpdated:
+        format: date-time
+        type: string
+      latestUpdatedOrBump:
         format: date-time
         type: string
       listingTypeEnum:
