@@ -1,0 +1,17 @@
+# To test if your modification to this file works, go to http://lint.travis-ci.org/.
+language: node_js
+env:
+  CXX=g++-4.8
+node_js:
+  - '6.9'
+matrix:
+  fast_finish: true
+os:
+  - linux
+notifications:
+  slack: haoshiyou:eSZq9zT9wMllEJYHMITggGky
+
+install:
+  - npm install
+script:
+  -

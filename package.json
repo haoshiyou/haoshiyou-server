@@ -5,7 +5,8 @@
   "scripts": {
     "update-bot": " ./node_modules/.bin/lb-sdk server/server ../haoshiyou-bot/loopbacksdk -d ng2web -i disabled -v enabled",
     "update-client": "  ./node_modules/.bin/lb-sdk server/server ../haoshiyou-dev/haoshiyou/src/loopbacksdk -d ng2web -i disabled -v enabled",
-    "start": "node ."
+    "start": "node .",
+    "test": "apic validate definitions/haoshiyou-server.yaml"
   },
   "dependencies": {
     "compression": "^1.7.1",
