@@ -1,5 +1,7 @@
 # Haoshiyou-Server, an API server for [haoshiyou.org](http://haoshiyou.org)
 
+[![Build Status](https://travis-ci.org/xinbenlv/haoshiyou-server.svg?branch=master)](https://travis-ci.org/xinbenlv/haoshiyou-server)
+
 `Haoshiyou-Server` is the server for haoshiyou.org. Please find more Developer Documentation
 under `docs`
 
