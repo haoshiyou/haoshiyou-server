@@ -57,7 +57,7 @@ Powered by StrongLoop/ApiConnec
   -d ng2web -i disabled -v enabled
   ```
 
-  for example
+  for example, for `haoshiyou-dev`
 
   ```bash
   ./node_modules/.bin/lb-sdk server/server \
