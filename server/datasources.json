@@ -1,6 +1,6 @@
 {
   "HsyMySQL-ClearDB": {
-    "url": "TALK TO xinbenlv to ask for DB configuration files",
+    "url": "${HSY_SERVER_MYSQL_URL}",
     "name": "HsyMySQL-ClearDB",
     "connector": "mysql"
   }
