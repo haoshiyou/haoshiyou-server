@@ -6,28 +6,32 @@
     "validateUpsert": true
   },
   "properties": {
+    "uid": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": {
+        "unique": true
+      },
+      "description": "interaction id",
+      "isArray": false
+    },
     "listingId": {
       "type": "string",
       "required": false,
+      "index": false,
       "description": "id to join with HsyListing"
     },
     "type": {
       "type": "string",
       "required": false,
-      "index": true,
+      "index": false,
       "description": "string enum indicating type of interaction, usch as 'BUMP','MARK_INACTIVE'"
-    },
-    "uid": {
-      "type": "string",
-      "id": true,
-      "required": true,
-      "index": true,
-      "description": "interaction id",
-      "isArray": false
     },
     "userId": {
       "type": "string",
       "required": false,
+      "index": false,
       "description": "id to join with HsyUser indicating whicd user is conducting this interaction"
     }
   },
