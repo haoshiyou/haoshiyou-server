@@ -1093,7 +1093,7 @@ definitions:
         type: object
       content:
         description: string of longer version description for entire listing
-        $ref: '#/definitions/text'
+        type: string
       hsyGroupEnum:
         description: "string enum such as ['SanFrancisco','SouthBayWest']"
         type: string
@@ -1200,14 +1200,14 @@ definitions:
     additionalProperties: false
   HsyInteraction:
     properties:
+      uid:
+        description: interaction id
+        type: string
       listingId:
         description: id to join with HsyListing
         type: string
       type:
         description: "string enum indicating type of interaction, usch as 'BUMP','MARK_INACTIVE'"
-        type: string
-      uid:
-        description: interaction id
         type: string
       userId:
         description: id to join with HsyUser indicating whicd user is conducting this interaction
