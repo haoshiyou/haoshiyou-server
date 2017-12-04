@@ -33,7 +33,7 @@ Powered by StrongLoop/ApiConnec
 
   ```bash
   curl --request GET \
-    --url 'https://localhost:3000/api/HsyListings' \
+    --url 'http://0.0.0.0:3000/api/HsyListings' \
     --header 'accept: application/json' \
     --header 'content-type: application/json' \
     --header 'x-ibm-client-id: default' \
