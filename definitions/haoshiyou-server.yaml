@@ -1075,6 +1075,29 @@ paths:
       summary: Update a related item by id for interactions.
       tags:
         - HsyListing
+  '/HsyListings/{id}/owner':
+    get:
+      deprecated: false
+      operationId: HsyListing.prototype.__get__owner
+      parameters:
+        - description: HsyListing id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - in: query
+          name: refresh
+          required: false
+          type: boolean
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyUser'
+      summary: Fetches belongsTo relation owner.
+      tags:
+        - HsyListing
   '/HsyListings/{id}/replace':
     post:
       deprecated: false
@@ -1453,6 +1476,176 @@ paths:
                 type: boolean
             type: object
       summary: Check whether a model instance exists in the data source.
+      tags:
+        - HsyUser
+  '/HsyUsers/{id}/listings':
+    delete:
+      deprecated: false
+      operationId: HsyUser.prototype.__delete__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      summary: Deletes all listings of this model.
+      tags:
+        - HsyUser
+    get:
+      deprecated: false
+      operationId: HsyUser.prototype.__get__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - format: JSON
+          in: query
+          name: filter
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            items:
+              $ref: '#/definitions/HsyListing'
+            type: array
+      summary: Queries listings of HsyUser.
+      tags:
+        - HsyUser
+    post:
+      deprecated: false
+      operationId: HsyUser.prototype.__create__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - in: body
+          name: data
+          required: false
+          schema:
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      summary: Creates a new instance in listings of this model.
+      tags:
+        - HsyUser
+  '/HsyUsers/{id}/listings/count':
+    get:
+      deprecated: false
+      operationId: HsyUser.prototype.__count__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Criteria to match model instances
+          format: JSON
+          in: query
+          name: where
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            properties:
+              count:
+                format: double
+                type: number
+            type: object
+      summary: Counts listings of HsyUser.
+      tags:
+        - HsyUser
+  '/HsyUsers/{id}/listings/{fk}':
+    delete:
+      deprecated: false
+      operationId: HsyUser.prototype.__destroyById__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for listings
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      summary: Delete a related item by id for listings.
+      tags:
+        - HsyUser
+    get:
+      deprecated: false
+      operationId: HsyUser.prototype.__findById__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for listings
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      summary: Find a related item by id for listings.
+      tags:
+        - HsyUser
+    put:
+      deprecated: false
+      operationId: HsyUser.prototype.__updateById__listings
+      parameters:
+        - description: HsyUser id
+          format: JSON
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: Foreign key for listings
+          format: JSON
+          in: path
+          name: fk
+          required: true
+          type: string
+        - in: body
+          name: data
+          required: false
+          schema:
+            $ref: '#/definitions/HsyListing'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/HsyListing'
+      summary: Update a related item by id for listings.
       tags:
         - HsyUser
   '/HsyUsers/{id}/replace':

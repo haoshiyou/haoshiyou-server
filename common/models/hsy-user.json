@@ -57,7 +57,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "listings": {
+      "type": "hasMany",
+      "model": "HsyListing",
+      "foreignKey": "ownerId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

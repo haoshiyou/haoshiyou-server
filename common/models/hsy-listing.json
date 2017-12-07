@@ -146,6 +146,11 @@
       "type": "hasMany",
       "model": "HsyInteraction",
       "foreignKey": "listingId"
+    },
+    "owner": {
+      "type": "belongsTo",
+      "model": "HsyUser",
+      "foreignKey": "ownerId"
     }
   },
   "acls": [],

@@ -21,6 +21,13 @@ export NODE_ENV='legacy'
 export NODE_ENV='dev' 
 ```
 
-2. Open `slc arc` and click on model to migrate
+3. Open `slc arc` and click on model to migrate
 then click on "Migrate model"
 
+## Add Relations
+
+```bash
+apic loopback:export-api-def -o definitions/haoshiyou-server-generated.yml
+./node_modules/.bin/yml-sorter -i definitions/haoshiyou-server-generated.yml -o definitions/haoshiyou-server-generated-sorted.yml
+ksdiff definitions/haoshiyou-server.yaml definitions/haoshiyou-server-generated-sorted.yml
+```
