@@ -97,11 +97,6 @@
       "required": false,
       "description": "date indicating when the house will be available"
     },
-    "requireToContact": {
-      "type": "string",
-      "required": false,
-      "description": "string enum indicating requirement to contact ['REGISTER'. 'LINKEDIN_CONNECTED']"
-    },
     "singleRoomBathRoomType": {
       "type": "string",
       "required": false,
@@ -138,6 +133,13 @@
     "latestUpdatedOrBump": {
       "type": "date",
       "comments": "latestUpdatedOrBump for sorting"
+    },
+    "requireToContact": {
+      "type": [
+        "string"
+      ],
+      "required": false,
+      "description": "string enum indicating requirement to contact ['REGISTER'. 'LINKEDIN_CONNECTED']"
     }
   },
   "validations": [],

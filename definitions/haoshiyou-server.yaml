@@ -105,7 +105,9 @@ definitions:
         description: >-
           string enum indicating requirement to contact ['REGISTER'.
           'LINKEDIN_CONNECTED']
-        type: string
+        items:
+          type: string
+        type: array
       singleRoomBathRoomType:
         description: 'string enum in [''SHARED'', ''PRIVATE_IN_ROOM'', ''PRIVATE_OUT_OF_ROOM'']'
         type: string
