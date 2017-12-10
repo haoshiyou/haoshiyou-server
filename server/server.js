@@ -4,7 +4,15 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+var checkEnv = function() {
+  if (!process.env.HSY_SERVER_MYSQL_URL) {
+    console.error('$HSY_SERVER_MYSQL_URL is not set, '
+      + 'set it by "export HSY_SERVER_MYSQL_URL=mysql://<user>:<pw>@<hostname>:<port>?reconnect=true"');
+    process.exit();
+  }
+  console.log('$HSY_SERVER_MYSQL_URL is set, now starting haoshiyou-server in NODE_ENV=' + process.env.NODE_ENV);
 
+};
 app.start = function() {
   // start the web server
   return app.listen(function() {
@@ -22,6 +30,8 @@ app.start = function() {
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
   if (err) throw err;
+
+  checkEnv();
 
   // start the server if `$ node server.js`
   if (require.main === module)
