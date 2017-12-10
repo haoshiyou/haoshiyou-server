@@ -27,7 +27,7 @@ then click on "Migrate model"
 ## Add Relations
 
 ```bash
-apic loopback:export-api-def -o definitions/haoshiyou-server-generated.yml
-./node_modules/.bin/yml-sorter -i definitions/haoshiyou-server-generated.yml -o definitions/haoshiyou-server-generated-sorted.yml
-ksdiff definitions/haoshiyou-server.yaml definitions/haoshiyou-server-generated-sorted.yml
+apic loopback:export-api-def -o definitions/tmp/haoshiyou-server-generated.yml
+./node_modules/.bin/yml-sorter -i definitions/tmp/haoshiyou-server-generated.yml -o definitions/tmp/haoshiyou-server-generated-sorted.yml
+ksdiff definitions/haoshiyou-server.yaml definitions/tmp/haoshiyou-server-generated-sorted.yml
 ```

@@ -37,13 +37,14 @@ definitions:
   HsyListing:
     additionalProperties: false
     properties:
-      addressCityAndState:
+      addressCity:
         description: string for City and State
         type: string
       addressLine:
-        description: >-
-          string for First line of Address, usually street number and street
-          name
+        type: string
+      addressState:
+        type: string
+      addressZipcode:
         type: string
       amenities:
         description: amenities in Key-Value pair for extension
