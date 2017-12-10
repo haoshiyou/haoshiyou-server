@@ -132,12 +132,6 @@
       "type": "number",
       "comments": "[DEPRECATED replaced by ListingTypeEnum] 0 for ROOMMATE_WANTED, 1 for ROOM_WANTED"
     },
-    "addressCity": {
-      "type": "string",
-      "required": false,
-      "comments": "string for City",
-      "deleted": false
-    },
     "addressLine": {
       "type": "string",
       "required": false,
@@ -150,6 +144,22 @@
     "addressState": {
       "type": "string",
       "comments": "string string of state in 2-letter form for example \"CA\""
+    },
+    "addressCity": {
+      "type": "string",
+      "required": false,
+      "comments": "string for City",
+      "deleted": false
+    },
+    "addressCityAndState": {
+      "type": "string",
+      "comments": "[DEPRECATED]"
+    },
+    "amenityArray": {
+      "type": [
+        "string"
+      ],
+      "comments": "array of string enums of Amenities, supporting ['洗衣机', '停车位', '可养宠物']"
     }
   },
   "validations": [],

@@ -38,7 +38,8 @@ definitions:
     additionalProperties: false
     properties:
       addressCity:
-        description: string for City and State
+        type: string
+      addressCityAndState:
         type: string
       addressLine:
         type: string
@@ -49,6 +50,10 @@ definitions:
       amenities:
         description: amenities in Key-Value pair for extension
         type: object
+      amenityArray:
+        items:
+          type: string
+        type: array
       content:
         description: string of longer version description for entire listing
         type: string
