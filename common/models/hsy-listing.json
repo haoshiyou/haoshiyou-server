@@ -160,6 +160,16 @@
         "string"
       ],
       "comments": "array of string enums of Amenities, supporting ['洗衣机', '停车位', '可养宠物']"
+    },
+    "location_lat": {
+      "type": "number",
+      "dataType": "double",
+      "comments": "latitude for location - will be sync with location.lat"
+    },
+    "location_lng": {
+      "type": "number",
+      "dataType": "double",
+      "comments": "longitude for location - will be sync with location.lng"
     }
   },
   "validations": [],
