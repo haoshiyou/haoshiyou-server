@@ -71,7 +71,7 @@ Powered by StrongLoop/ApiConnec
 
   ```bash
   ./node_modules/.bin/lb-sdk server/server \
-  ../haoshiyou-bot/loopbacksdk \
+  ../haoshiyou-bot/v1/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
 ## Release to Heroku
