@@ -66,7 +66,9 @@ Powered by StrongLoop/ApiConnec
   ../haoshiyou-dev/haoshiyou/src/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
-  
+    ./node_modules/.bin/lb-sdk server/server \
+    ../haoshiyou-ai/loopbacksdk \
+    -d ng2web -i disabled -v enabled
   or for `haoshiyou-bot`
 
   ```bash
@@ -74,6 +76,15 @@ Powered by StrongLoop/ApiConnec
   ../haoshiyou-bot/v1/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
+  
+  or for `haoshiyou-ai`
+
+  ```bash
+  ./node_modules/.bin/lb-sdk server/server \
+  ../haoshiyou-ai/loopbacksdk \
+  -d ng2web -i disabled -v enabled
+  ```  
+  
 ## Release to Heroku
 ```bash
 git push heroku master
