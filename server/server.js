@@ -2,7 +2,7 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-
+var path = require('path');
 var app = module.exports = loopback();
 var checkEnv = function() {
   if (!process.env.HSY_SERVER_MYSQL_URL) {
@@ -13,6 +13,7 @@ var checkEnv = function() {
   console.log('$HSY_SERVER_MYSQL_URL is set, now starting haoshiyou-server in NODE_ENV=' + process.env.NODE_ENV);
 
 };
+app.use(loopback.static(path.resolve(__dirname, '../static')));
 app.start = function() {
   // start the web server
   return app.listen(function() {
