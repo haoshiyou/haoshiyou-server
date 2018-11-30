@@ -23,9 +23,80 @@ module.exports = function(server) {
       res.send(result);
     });
     router.get('/GetTopScores', async function(req, res) {
-      res.send('not implemented');
-    });
 
+      let result = await db.collection("Contacts").aggregate(
+
+        [
+          {
+            "$match": {
+              "blacklisted": {
+                "$ne": true
+              },
+              "wechatId": {
+                "$ne": ""
+              },
+              "isAdmin": {
+                "$ne": true
+              },
+              "relatedUserName": {
+                "$exists": true
+              },
+              "relatedUserName.1": {
+                "$exists": true
+              }
+            }
+          },
+          {
+            "$project": {
+              "wechatId": true,
+              "relatedUserName": true,
+              "nick": "$obj.nickName"
+            }
+          },
+          {
+            "$project": {
+              "totalScore": {
+                "$size": "$relatedUserName"
+              },
+              "wechatId": true,
+              "nick": true,
+              "relatedUserName": true
+            }
+          },
+          {
+            "$sort": {
+              "totalScore": -1.0,
+              "wechatId": 1.0
+            }
+          },
+          {
+            "$limit": 10.0
+          },
+          {
+            "$lookup": {
+              "from": "Contacts",
+              "localField": "relatedUserName",
+              "foreignField": "wechatId",
+              "as": "relatedUserNameObj"
+            }
+          },
+          {
+            "$addFields": {
+              "relatedNickNames": "$relatedUserNameObj.obj.nickName"
+            }
+          },
+          {
+            "$project": {
+              "relatedUserNameObj": false
+            }
+          }
+        ]
+
+        // Created with Studio 3T, the IDE for MongoDB - https://studio3t.com/
+
+      ).toArray();
+      res.send(result);
+    });
 
     server.use(router);
   }).then(() => {
